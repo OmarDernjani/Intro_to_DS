@@ -1,0 +1,81 @@
+ESERCIZIO 1-------
+
+pip install numpy, matplotlib, pandas
+import numpy as np
+import matplotlib as plt
+import pandas as pd
+
+print("l'ambiente di sviluppo è pronto")
+
+ESERCIZIO 2-------
+
+class Matrix:
+    def __init__(self, *vec):
+        self.vec = list(vec)
+
+    def __repr__(self):
+    
+        fixed_list = []
+        
+        for vec in self.vec:
+            res = ''
+            res += "["
+            for elem in vec:
+                vec1 = vec[::-1]
+                if vec1.index(elem) != 0:
+                    res += str(elem) + ','
+                else:
+                    res += str(elem) + "]"
+            fixed_list.append(res)
+        
+        
+        return f"([{"\n".join(fixed_list)}])"
+
+    @staticmethod
+    def shape(M):
+        rows = len(M.vec)
+        if rows == 0:
+            return (0, 0)
+        cols = len(M.vec[0])
+        return (rows, cols)
+
+    @staticmethod
+    def add_row(M,*row):
+        M.vec.append(list(row))
+        
+            
+    @staticmethod
+    def matrix_sum(Matrix1,Matrix2):
+        fn_matrix = Matrix() 
+        tmp = []
+        for i in range(0, Matrix.shape(Matrix1)[0]):
+            for j in range(0, Matrix.shape(Matrix1)[1]):
+                tmp.append(Matrix1.vec[i][j] + Matrix2.vec[i][j])
+            Matrix.add_row(fn_matrix,tmp)
+            tmp = []
+        return fn_matrix
+
+    @staticmethod
+    def scalar_product(matrix, scalar):
+        sc_matrix = Matrix() 
+        tmp = []
+        for i in range(0, Matrix.shape(matrix)[0]):
+            for j in range(0, Matrix.shape(matrix)[1]):
+                tmp.append(matrix.vec[i][j] * scalar)
+            Matrix.add_row(sc_matrix,tmp)
+            tmp = []
+        return sc_matrix
+    
+    @staticmethod 
+    def dot_product(matrix1, matrix2):
+        result = Matrix()
+        for i in range(Matrix.shape(matrix1)[0]):
+            tmp = []
+            for j in range(Matrix.shape(matrix2)[1]):
+                dot_sum = 0
+                for k in range(Matrix.shape(matrix1)[1]):
+                    dot_sum += matrix1.vec[i][k] * matrix2.vec[k][j]
+                tmp.append(dot_sum)
+            Matrix.add_row(result, *tmp)
+        return result
+

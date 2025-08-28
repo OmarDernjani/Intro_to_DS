@@ -1,0 +1,93 @@
+Soluzioni secondo notebook:
+
+**Ricordarsi di importare numpy** 
+
+ESERCIZIO 1-------
+
+A = np.zeros([4,3],dtype = "int")
+j = 0
+i = 1
+for vec in A:
+    j = 0
+    while j <= len(vec)-1:
+        
+        vec[j] = i
+        if j > len(vec)-1:
+            break
+        j += 1
+        i += 1
+print(A)
+print(A.T)
+print(A[1])
+print(A.reshape(12,))
+print(A.reshape(2,6))
+
+ESERCIZIO 2-------
+
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]]) 
+v = np.array([2, 3])
+
+print(A@B)
+print(A*B)
+print(A*v)
+print(v*A)
+
+ESERCIZIO 3-------
+
+M = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+res = 0
+for vec in M:
+    for entries in vec:
+        res += entries
+print(res)
+
+res = 0
+A = M[1,]
+for entries in A:
+    res += entries
+print(res)
+
+res = 0
+D = M.T
+B = D[0,]
+for entries in B:
+    res += entries
+print(res)
+
+print(np.max(M),np.argmax(M))
+
+B = np.zeros(M.shape)
+total_shape = ( M.shape[0] * M.shape[1])
+print (total_shape)
+
+for i in range(0,M.shape[0]):
+    for j in range(0,M.shape[1]):
+        if M[i][j] > 5:
+            B[i][j] = 1
+print(B)
+
+ESERCIZIO 4-------
+
+def max_colonna(Matrix):
+    trs = Matrix.T
+    fin = Matrix @ Matrix.T
+    media = []
+    res = 0
+    
+    fin = fin.T
+    print(fin)
+    
+    for i in range(0, fin.shape[0]):
+        for j in range(0, fin.shape[1]):
+            res += fin[i][j]
+        media.append(res/fin.shape[0])
+        
+        res = 0
+    return max(media)
+
+M = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(max_colonna(M))
+
+
