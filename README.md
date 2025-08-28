@@ -1,13 +1,12 @@
 # Intro_to_DS
-# 📊 Introduzione all'Algebra Lineare e Calcolo Scientifico con Python
 
-Un corso pratico e interattivo per imparare i fondamenti dell'algebra lineare utilizzando Python, NumPy e Jupyter Notebook.
+Un corso pratico per imparare i fondamenti matematici della data science e ML.
 
-## 🎯 Obiettivi del Corso
+## Obiettivi del Corso
 
 Questo repository contiene una serie di notebook Jupyter progettati per introdurre studenti e sviluppatori ai concetti fondamentali dell'algebra lineare attraverso un approche pratico con Python. Il corso copre dalla configurazione dell'ambiente di sviluppo fino alle applicazioni avanzate con accelerazione GPU tramite CUDA.
 
-## 📚 Struttura del Corso
+## Struttura del Corso
 
 ### Capitolo 1: Introduzione e Setup
 - **File:** `Capitolo 1. .ipynb`
@@ -31,7 +30,7 @@ Questo repository contiene una serie di notebook Jupyter progettati per introdur
 - Introduzione a CUDA e CuPy per accelerazione GPU
 - Confronto prestazioni CPU vs GPU
 
-## 🚀 Come Iniziare
+## Come Iniziare
 
 ### Prerequisiti
 - Python 3.8+
@@ -79,7 +78,7 @@ pip install ipykernel
 python -m ipykernel install --user --name=myenv --display-name "Python (ML)"
 ```
 
-## 📖 Contenuti Dettagliati
+## Contenuti Dettagliati
 
 ### Concetti Teorici Trattati
 - Spazi vettoriali e proprietà dei vettori
@@ -103,7 +102,7 @@ python -m ipykernel install --user --name=myenv --display-name "Python (ML)"
 - Esempi di codice commentati
 - Esercizi graduali con soluzioni
 
-## 🔧 Esercizi e Attività
+## Esercizi e Attività
 
 Ogni capitolo include esercizi pratici di difficoltà crescente:
 - Creazione e manipolazione di matrici
@@ -112,15 +111,7 @@ Ogni capitolo include esercizi pratici di difficoltà crescente:
 - Analisi delle prestazioni
 - Visualizzazione dei risultati
 
-## ⚡ Prestazioni e Ottimizzazione
-
-Il corso include una sezione dedicata all'ottimizzazione:
-- Analisi della complessità algoritmica O(mn² + n³)
-- Confronto CPU vs GPU
-- Utilizzo di CUDA per accelerazione
-- Best practices per matrici di grandi dimensioni
-
-## 🤝 Contributi
+## Contributi
 
 I contributi sono benvenuti! Se hai suggerimenti, correzioni o miglioramenti:
 
@@ -130,23 +121,15 @@ I contributi sono benvenuti! Se hai suggerimenti, correzioni o miglioramenti:
 4. Push al branch (`git push origin feature/miglioramento`)
 5. Apri una Pull Request
 
-## 📝 Licenza
+## Licenza
 
 Questo progetto è distribuito sotto licenza MIT. Vedi il file `LICENSE` per i dettagli.
 
-## 🎓 Target
+## Target
 
 - Studenti universitari di ingegneria, matematica, fisica
 - Sviluppatori interessati al machine learning
 - Chiunque voglia apprendere l'algebra lineare con un approccio pratico
 - Professionisti che necessitano di rinnovare le proprie conoscenze
 
-## 📞 Contatti
 
-Per domande, suggerimenti o collaborazioni:
-- GitHub Issues per problemi tecnici
-- Discussioni per domande generali sul corso
-
----
-
-*Buon apprendimento! 🚀*
